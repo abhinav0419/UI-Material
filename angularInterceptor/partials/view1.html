@@ -1,0 +1,25 @@
+<div>
+    <ul>
+        <li ng-click="goToView('/first')">View 1</li>
+        <li ng-click="goToView('/second')">View 2</li>
+        <li ng-click="goToView('/third')">View 3</li>
+    </ul>
+</div>
+<p id="viewId">View 1</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="p in models.cache.modelSummary">
+            <td>{{p.name}}</td>
+            <td>{{p.city}}</td>
+            <td>{{p.phone}}</td>
+        </tr>
+    </tbody>
+</table>

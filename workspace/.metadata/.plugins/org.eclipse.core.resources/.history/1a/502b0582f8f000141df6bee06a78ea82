@@ -1,0 +1,32 @@
+package solutions.egen.utils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnector {
+
+	private final static String DB_URL = "jdbc:mysql://localhost:3306/emp_db";
+	private final static String DB_USER = "root";
+	private final static String DB_PASSWORD = "root";
+	
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver loaded");
+		} catch (ClassNotFoundException e) {
+			System.err.println("error loading driver. " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	public static Connection connect() {
+		Connection con = null;
+		
+		con = DriverManager.getConnection(url, user, password);
+		
+		
+		
+		return con;
+	}
+	
+}

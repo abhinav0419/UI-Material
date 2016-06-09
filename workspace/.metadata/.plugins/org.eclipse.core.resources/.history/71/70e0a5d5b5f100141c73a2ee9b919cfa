@@ -1,0 +1,30 @@
+(function(){
+	'use strict';
+	
+	$('#getAll_btn').click(function(){
+		$.ajax({
+			type: 'GET',
+			url: 'api/emp/all',
+			complete: function () {
+				console.log('request is complete');
+			},
+			success: function (data) {
+				console.log(data);
+				for(var i=0; i<data.payload.length; i++)
+				{
+					var pEl = $('<p></p>');
+					pEl.text(data.payload[i].firstName + " " + data.payload[i].lastName);
+					$('body').append(pEl);
+				}	
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		});
+	});
+	
+	
+	
+	
+	
+})();

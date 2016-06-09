@@ -1,0 +1,18 @@
+package solutions.egen.models;
+
+public class Employee {
+
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String address1;
+	private String address2;
+	private String city;
+	private int zip;
+	private String state;
+	private String phone;
+	
+	
+	
+}

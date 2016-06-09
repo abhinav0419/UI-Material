@@ -1,0 +1,5 @@
+package solutions.egen.models;
+
+public class Employee {
+
+}

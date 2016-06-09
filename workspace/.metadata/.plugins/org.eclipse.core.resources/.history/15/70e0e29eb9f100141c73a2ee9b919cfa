@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RESTApp</title>
+</head>
+<body>
+	<button id="getAll_btn">GET ALL</button>
+	<hr>
+	<input type="text" placeholder="Employee ID" id="empId_input">
+	<button id="getEmp_btn">GET Employee</button>
+	<hr>
+	
+	<form>
+	<input type="text" placeholder="First Name" id="firstName">
+	<input type="text" placeholder="Last Name" id="lastName">
+	<input type="text" placeholder="Email" id="email">
+	<input type="text" placeholder="Address 1" id="address1">
+	<input type="text" placeholder="Address 2" id="address2">
+	<input type="text" placeholder="City" id="city">
+	<input type="text" placeholder="State" id="state">
+	<input type="text" placeholder="Phone" id="phone">
+	<input type="text" placeholder="ZIP" id="zip">
+	
+	<button type="submit" id="addEmp_btn">Add Employee</button>
+	</form>
+	
+	<hr>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>AngularJS Plunker</title>
+    <script src="//code.angularjs.org/1.3.14/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.3.14/angular-sanitize.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl as main">
+<form name="zipCode">
+    Enter Zip code:
+    <input type="number" name="zip" ng-model="main.zipcode"/>
+    <input type="button" ng-click="main.loadWeather()" value="Submit"/>
+    <br>
+    <span class="error" ng-show="zipCode.zip.$error.number">
+    Not valid number!</span>
+</form>
+<p>{{main.weather.location.city}} {{main.weather.location.region}} {{main.weather.location.country}}</p>
+
+<div ng-bind-html="main.weather.item.description">
+</div>
+</body>
+</html>

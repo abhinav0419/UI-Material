@@ -1,0 +1,49 @@
+package solutions.egen.rest.controllers;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import solutions.egen.daos.EmpDAO;
+import solutions.egen.exceptions.AppException;
+import solutions.egen.models.Employee;
+
+@Path("/emp")
+public class EmployeeController {
+
+	@GET
+	@Path("/all")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Employee> getAll() {
+		
+		EmpDAO dao = new EmpDAO();
+		
+		List<Employee> empList;
+		try {
+			EmpDAO dao = new EmpDAO();
+			empList = dao.getAllEmployees();
+		} catch (AppException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return empList;
+	}
+	
+	@GET
+	@Path("get/101")
+	public String getEmployee () {
+		return "This is employee with id 101";
+	}
+	
+	
+	@POST
+	@Path("/add")
+	public void addEmployee () {
+		
+	}
+}

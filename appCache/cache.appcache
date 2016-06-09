@@ -1,0 +1,20 @@
+CACHE MANIFEST
+#v 1.1 04/05/2015
+
+CACHE:
+styles/style.css
+scripts/lib/jquery-1.10.1.min.js
+scripts/script.js
+images/logo/angularjs_logo.png
+images/logo/browsers.png
+images/logo/html5_logo_128.png
+images/logo/css3_logo_128.png
+images/logo/Sublime_Text_Logo.png
+images/logo/js_logo_128.jpg
+audio/rushus-modal_blues.mp3
+
+NETWORK:
+*
+
+FALLBACK:
+/ offline.html

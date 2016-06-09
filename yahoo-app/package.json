@@ -1,0 +1,8 @@
+{
+  "name": "yahoo-app",
+  "version": "1.0.0",
+  "description": "Yahoo App using NodeJS and AngularJS",
+  "dependencies": {
+    "express": "^4.12.2"
+  }
+}

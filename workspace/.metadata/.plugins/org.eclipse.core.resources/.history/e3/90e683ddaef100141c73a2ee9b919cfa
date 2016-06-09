@@ -1,0 +1,6 @@
+package solutions.egen.exceptions;
+
+public class AppException extends Exception {
+
+	
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RESTApp</title>
+</head>
+<body>
+	<button>GET ALL</button>
+	<hr>
+	<input type="number" placeholder="Employee ID">
+	<button>GET Employee</button>
+	<hr>
+	<button>Add Employee</button>
+	
+	
+	<script src="scripts/app.js"></script>
+</body>
+</html>

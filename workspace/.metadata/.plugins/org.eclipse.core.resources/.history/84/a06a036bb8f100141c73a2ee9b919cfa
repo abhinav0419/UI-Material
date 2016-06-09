@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RESTApp</title>
+</head>
+<body>
+	<button id="getAll_btn">GET ALL</button>
+	<hr>
+	<input type="number" placeholder="Employee ID" id="empId_input">
+	<button id="getEmp_btn">GET Employee</button>
+	<hr>
+	<button id="addEmp_btn">Add Employee</button>
+	<hr>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="scripts/app.js"></script>
+</body>
+</html>

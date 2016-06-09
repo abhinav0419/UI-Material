@@ -1,0 +1,25 @@
+<div class="container">
+  <h3>Users</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>View</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>ZIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in usersVm.people">
+        <td><a ng-href="#/users/{{p.id}}"><span class="glyphicon glyphicon-user"></span></a></td>
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.address.city}}</td>
+        <td>{{p.address.zipcode}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

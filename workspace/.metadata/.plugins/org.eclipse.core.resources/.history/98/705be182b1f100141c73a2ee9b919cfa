@@ -1,0 +1,70 @@
+package solutions.egen.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import solutions.egen.exceptions.AppException;
+import solutions.egen.models.Employee;
+import solutions.egen.utils.DBConnector;
+
+public class EmpDAO {
+
+	public List<Employee> getAllEmployees () throws AppException {
+		List<Employee> empList = new ArrayList<Employee>();
+		
+		Connection con = DBConnector.connect();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement("SELECT * FROM employee");
+			rs = ps.executeQuery();
+			
+			while(rs.next())
+			{
+				Employee emp = new Employee();
+				
+				emp.setId(rs.getInt("ID"));
+				emp.setFirstName(rs.getString("FIRST_NAM"));
+				emp.setLastName(rs.getString("LAST_NAME"));
+				emp.setEmail(rs.getString("EMAIL"));
+				emp.setAddress1(rs.getString("ADDRESS1"));
+				emp.setAddress2(rs.getString("ADDRESS2"));
+				emp.setCity(rs.getString("CITY"));
+				emp.setZip(rs.getInt("ZIP"));
+				emp.setState(rs.getString("STATE"));
+				emp.setPhone(rs.getString("PHONE"));
+				
+				empList.add(emp);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new AppException("ERROR: " + e.getMessage(), e.getCause());
+		}
+		finally {
+			try {
+				if(ps != null)
+				{
+					ps.close();
+				}
+				
+				if(rs != null)
+				{
+					rs.close();
+				}
+				
+				if(con != null)
+				{
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return empList;
+	}
+}

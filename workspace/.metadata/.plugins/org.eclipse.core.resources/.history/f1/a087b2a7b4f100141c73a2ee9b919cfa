@@ -1,0 +1,19 @@
+(function(){
+	'use strict';
+	
+	$('#getAll_btn').click(function(){
+		
+		$.ajax({
+			type: 'GET',
+			url: 'api/emp/all',
+			success: function (data) {
+				console.log(data);
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		});
+		
+	});
+	
+})();

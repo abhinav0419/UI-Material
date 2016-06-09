@@ -1,0 +1,8 @@
+package solutions.egen.exceptions;
+
+public class AppException extends Exception {
+
+	public AppException (String errorMsg) {
+		super(errorMsg);
+	}
+}

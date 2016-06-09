@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RESTApp</title>
+</head>
+<body>
+it works.
+<script src="scripts/app.js"></script>
+</body>
+</html>

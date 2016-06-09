@@ -1,0 +1,5 @@
+package solutions.egen.utils;
+
+public class DBConnector {
+
+}

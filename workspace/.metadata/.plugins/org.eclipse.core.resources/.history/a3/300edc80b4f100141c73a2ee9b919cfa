@@ -1,0 +1,10 @@
+(function(){
+	'use strict';
+	
+	$('#getAll_btn').click(function(){
+		
+		$.ajax();
+		
+	});
+	
+})();

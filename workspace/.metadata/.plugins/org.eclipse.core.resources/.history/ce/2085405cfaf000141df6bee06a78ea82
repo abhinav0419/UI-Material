@@ -1,0 +1,9 @@
+package solutions.egen.app;
+
+import org.glassfish.jersey.server.ResourceConfig;
+
+
+public class RESTApplication extends ResourceConfig {
+
+	
+}

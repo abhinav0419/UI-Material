@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Posts</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in postsVm.posts">
+        <td>{{p.id}}</td>
+        <td>{{p.title}}</td>
+        <td>{{p.userId}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

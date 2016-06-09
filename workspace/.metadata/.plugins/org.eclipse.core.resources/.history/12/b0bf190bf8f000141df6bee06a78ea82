@@ -1,0 +1,17 @@
+package solutions.egen.utils;
+
+public class DBConnector {
+
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver loaded");
+		} catch (ClassNotFoundException e) {
+			System.err.println("error loading driver. " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+}

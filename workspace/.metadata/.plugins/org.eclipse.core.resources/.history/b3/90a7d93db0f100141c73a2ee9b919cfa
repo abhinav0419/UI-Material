@@ -1,0 +1,5 @@
+package solutions.egen.rest;
+
+public class AppResponse {
+
+}

@@ -1,0 +1,81 @@
+(function(){
+	'use strict';
+	
+	$('#getAll_btn').click(function(){
+		$.ajax({
+			type: 'GET',
+			url: 'api/emp/all',
+			success: function (data) {
+				console.log(data);
+				for(var i=0; i<data.payload.length; i++)
+				{
+					var pEl = $('<p></p>');
+					pEl.text(data.payload[i].firstName + " " + data.payload[i].lastName);
+					$('body').append(pEl);
+				}	
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		});
+	});
+	
+	
+	$('#getEmp_btn').click(function(){
+		
+		var empId = new Number ($('#empId_input').val());
+		
+		if(!isNaN(empId))
+		{
+			$.ajax({
+				type: 'GET',
+				url: 'api/emp/get/' + empId,
+				success: function (data) {
+					console.log(data);
+					var pEl = $('<p></p>');
+					pEl.text(data.payload.firstName + " " + data.payload.lastName);
+					$('body').append(pEl);
+				},
+				error: function(error) {
+					console.log(error);
+				}
+			});
+		}
+		else {
+			alert('Employee ID must be a numeric value')
+		}
+	});
+	
+	
+	$('#addEmp_btn').click(function(){
+		
+		var emp = {
+				
+		};
+		
+		if(!isNaN(empId))
+		{
+			$.ajax({
+				type: 'GET',
+				url: 'api/emp/get/' + empId,
+				success: function (data) {
+					console.log(data);
+					var pEl = $('<p></p>');
+					pEl.text(data.payload.firstName + " " + data.payload.lastName);
+					$('body').append(pEl);
+				},
+				error: function(error) {
+					console.log(error);
+				}
+			});
+		}
+		else {
+			alert('Employee ID must be a numeric value')
+		}
+	});
+	
+	
+	
+	
+	
+})();

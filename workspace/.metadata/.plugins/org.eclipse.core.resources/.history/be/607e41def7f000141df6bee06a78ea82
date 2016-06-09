@@ -1,0 +1,8 @@
+package solutions.egen.utils;
+
+public class DBConnector {
+
+	static {
+		Class.forName("com.mysql.jdbc.Driver");
+	}
+}

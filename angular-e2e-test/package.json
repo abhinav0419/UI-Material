@@ -1,0 +1,12 @@
+{
+  "name": "angular-test",
+  "version": "1.0.1",
+  "description": "Working with grunt",
+  "author": "psalitra",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-cssmin": "~0.10.0"
+  }
+}
